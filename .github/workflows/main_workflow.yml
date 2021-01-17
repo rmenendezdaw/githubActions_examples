@@ -3,7 +3,7 @@ on: push
 jobs:
   linter-execution:
   runs-on: ubuntu-latest
-    - name: Linter execution
+    name: Linter execution
   steps:
     - name: Checkout code
       uses: actions/checkout@v2
