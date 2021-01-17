@@ -1,5 +1,9 @@
+var http = require('http');
 
-let suma = 2+2;
+http.createServer(function (req, res) {
 
-console.log("2+2=?")
-console.log("La suma es "+suma)
+
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write('Hello!');
+  res.end();
+}).listen(8080);
