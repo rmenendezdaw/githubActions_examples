@@ -5,9 +5,9 @@ jobs:
   runs-on: ubuntu-latest
     - name: linter-execution
   steps:
-    - name: checkout-code
+    - name: Checkout code
       uses: actions/checkout@v2
-    - name: linter-execution
+    - name: Linter execution
       uses: github/super-linter@v3
       env:
         DEFAULT_BRANCH: nodejs_linter_job
