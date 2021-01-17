@@ -1,12 +1,15 @@
 name: main_workflow
+
 on: push
+
 jobs:
   linter-execution:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     name: Linter execution
   steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
     - name: Linter execution run
       uses: github/super-linter@v3
       env:
