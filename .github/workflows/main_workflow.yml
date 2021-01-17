@@ -1,8 +1,23 @@
 name: main_workflow
 
-on: push
+on:   
+  push:
+    branches:
+      - nodejs_jest_job
 
 jobs:
+  test-execution:
+    name: Test Execution
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run jest tests
+        run: |
+          npm install jest
+          npm test
+
   linter-execution:
     runs-on: ubuntu-latest
     name: Linter execution 
