@@ -9,6 +9,7 @@ jobs:
   test-execution:
     name: Test Execution
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         node: [10, 12]
