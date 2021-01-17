@@ -1,9 +1,5 @@
-var http = require('http');
 
-http.createServer(function (req, res) {
-
-
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write('Hello!');
-  res.end();
-}).listen(8080);
+function suma (a, b = 1) {
+    return a + b;
+  }
+console.log(suma(6, 8));
