@@ -45,9 +45,9 @@ jobs:
   environment_test_execution:
     runs-on: ubuntu-latest
     name: Env test
+    needs: [linter-execution, test-execution]
     steps:
       - name: Test env
-        needs: [linter-execution, test-execution]
         uses: actions/github-actions-hello@v1 
         env:
           DESTINATION_PERSON: 2DAW
