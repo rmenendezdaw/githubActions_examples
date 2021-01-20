@@ -3,7 +3,7 @@ name: main_workflow
 on:   
   push:
     branches:
-      - nodejs_nodeversions_job
+      - nodejs_environment_job
 
 jobs:
   test-execution:
