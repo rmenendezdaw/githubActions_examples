@@ -42,3 +42,12 @@ jobs:
           LINTER_RULES_PATH: /
           JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json 
           VALIDATE_JAVASCRIPT_ES: true
+  environment_test_execution:
+    runs-on: ubuntu-latest
+    name: Env test
+    need: [linter-execution, test-execution]
+    uses: actions/github-actions-hello@v1 
+    env:
+      DESTINATION_PERSON: 2DAW
+    with: 
+      who-to-greet: 'Hello  ${{env.DESTINATION_PERSON}}'
