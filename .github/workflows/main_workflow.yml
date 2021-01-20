@@ -47,7 +47,7 @@ jobs:
     name: Env test
     steps:
       - name: Test env
-        need: [linter-execution, test-execution]
+        needs: [linter-execution, test-execution]
         uses: actions/github-actions-hello@v1 
         env:
           DESTINATION_PERSON: 2DAW
