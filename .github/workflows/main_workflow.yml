@@ -52,4 +52,4 @@ jobs:
         env:
           DESTINATION_PERSON: 2DAW
         with: 
-          who-to-greet: 'Hello  ${{env.DESTINATION_PERSON}}'
+          who-to-greet: '${{env.DESTINATION_PERSON}}'
