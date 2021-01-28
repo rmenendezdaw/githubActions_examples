@@ -1,0 +1,17 @@
+name: "Send message by Telegram"
+description: "Send message with bot"
+
+inputs: 
+  tokenBot:
+    description: "Token of bot"
+    required: true
+  chatId:
+    description: "Id chat"
+    required: true 
+  name:
+    description: "Name" 
+    required: true
+
+runs:
+  using: "node12"
+  main: "dist/index.js"

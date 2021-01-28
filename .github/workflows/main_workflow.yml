@@ -1,0 +1,21 @@
+name: Main workflow
+
+on:
+  push:
+    branches:
+      - send_telegram_action
+
+jobs:
+  envio_mensaje:
+    name: envio_mensaje
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Send Message
+        uses: ./.github/actions/node-telegram-bot-api
+        with:
+          tokenBot: ${{secrets.TELEGRAM_TOKEN }}
+          chatId: ${{secrets.CHAT_ID }}
+          name: "Raul"
+
